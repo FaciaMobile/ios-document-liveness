@@ -1,0 +1,97 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name Facia
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+@_exported import Facia
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import UniformTypeIdentifiers
+import Vision
+import VisionKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class Facia : ObjectiveC.NSObject {
+  public var face_detected_oval_color: UIKit.UIColor
+  public var face_not_detected_oval_color: UIKit.UIColor
+  public var dark_text_color: UIKit.UIColor
+  public var light_text_color: UIKit.UIColor
+  public var ql_instruction_bg_color: UIKit.UIColor
+  public var button_bg_color: UIKit.UIColor
+  public var button_text_color: UIKit.UIColor
+  public var dialog_button_text_color: UIKit.UIColor
+  public func getUniqueReference() -> Swift.String
+  @objc public func createRequest(parentViewController: UIKit.UIViewController, configs: [Swift.String : Any]?, documentType: Swift.String, completion: @escaping (_ result: Any) -> ())
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum Threshold : Swift.String {
+  case low
+  case medium
+  case high
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OvalSize : Swift.String {
+  case small
+  case medium
+  case large
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FaceLiveness : Swift.String {
+  case QUICK_LIVENESS_ONLY
+  case DETAILED_LIVENESS_ONLY
+  case ADDITIONAL_CHECK_LIVENESS
+  case DEFAULT_LIVENESS
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ServiceType : Swift.String {
+  case FACE_LIVENESS
+  case MATCH_TO_PHOTO_ID
+  case DOCUMENT_LIVENESS
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DocumentType : Swift.String {
+  case PASSPORT
+  case ID_CARD
+  case OTHERS
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Facia.Threshold : Swift.Equatable {}
+extension Facia.Threshold : Swift.Hashable {}
+extension Facia.Threshold : Swift.RawRepresentable {}
+extension Facia.OvalSize : Swift.Equatable {}
+extension Facia.OvalSize : Swift.Hashable {}
+extension Facia.OvalSize : Swift.RawRepresentable {}
+extension Facia.FaceLiveness : Swift.Equatable {}
+extension Facia.FaceLiveness : Swift.Hashable {}
+extension Facia.FaceLiveness : Swift.RawRepresentable {}
+extension Facia.ServiceType : Swift.Equatable {}
+extension Facia.ServiceType : Swift.Hashable {}
+extension Facia.ServiceType : Swift.RawRepresentable {}
+extension Facia.DocumentType : Swift.Equatable {}
+extension Facia.DocumentType : Swift.Hashable {}
+extension Facia.DocumentType : Swift.RawRepresentable {}
